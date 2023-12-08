@@ -1,0 +1,63 @@
+import numpy as np
+import pandas as pd
+from nltk.corpus import stopwords
+from nltk.stem import Hordhietlematizer
+from matplotlib import pyplot
+import seaborn as sns
+Zmatplotlib inline
+import nltk
+nitk.download("punkt")
+nltk.download("stopwords")
+nltk.download("wordnet")
+nltk.download('om-1.4")
+[nltk_data] Downloading package punkt to /root/nitk_data...
+[nltk data] unzipping tokenizers/punkt.zip.
+[nitk data] Downloading package stopwords to /root/nltk. data..
+..
+[nltk_data] unzipping corpora/stopwords.zip.
+[nltk_data] Downloading package wordnet to /root/nitk_data...
+[nltk_data] Downloading package om-1.4 to /root/nltk_data...
+True
+ hotel details-pd.read _esv('/content/uotel details.csy")
+hotel_rooms-pd,read_csv(" /content/Hotel Room attributes.csv")
+hotel_details.head()
+hotel_details-pd.read_csv(' /content/Hotel details.csv")
+hotel_rooms-pd.read_csv('[/content/Hotel Room_ attributes.csv')
+hotel_details.head()
+hotel_ details.columns
+ hotel_rooms.columns
+hotel_rooms.info()
+hotel_details.info()
+hotel.details.describe()
+hotel_rooms.describe()
+del hotel_details['id']
+del hotel_ rooms['id']
+del hotel details["zipcode']
+del hotel_details['latitude]
+del hotel_details["longitude'] hotel_ details-hotel_details.dropna()
+hotel_rooms-hotel_rooms.dropna() hotel-pd.merge(hotel_rooms,hotel_ details,left on-'hotelcode",right_on-'hotelid",how-'iner')
+hotel.columns
+hotel['description']-hotel['roomamenities' ]+hotel['ratedescription']
+del hotelf'ratedescription']
+del hotel[ 'roomamenities']
+del hotel['roomamenities']
+hotel.columns
+hotel.describe(include='all')
+corr_df-hotel.corr(method="pearson")
+pyplot.figure(figsize-(9,6))
+heatmap-sns.heatmap(corr_df,annot=True,fmt=".ig",vmin=-1,vmax-i,centerw@,cmap="rocket",linewidths=i,linecolorw"Black")
+heatmap.set_title("correlation HeatHap between variables")
+heatmap.set_xticklabels(heatmap.get_xticklabels(),rotation=99);
+plot-hotel[["hotelname","starrating" ]].drop duplicates()
+sns.set(font _scale-2.5)
+fig,ax-pyplot.subplots(figsize-a4 dims)
+sns.countplot(ax-ax,x="starrating",data-plot);
+Hotel_counts=hotel["hotelname"].value_counts() 
+Hotel_counts[:10].plot(kind='barh', figsize=(20, 8)) ;
+plot = hotel[["city","country"]].drop_duplicates()
+plot.groupby("country").count()
+sns.set(font_scale-1.8)
+a4_dims=(15,7)
+fig,ax-pyplot.subplots(figsize-a4_dims)
+pyplot.xticks(rotation=90)
+sns. countplot(ax-ax,x-"country",data-plot).set(title-"number of hotels in each country");
